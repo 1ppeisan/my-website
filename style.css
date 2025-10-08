@@ -4,29 +4,60 @@ body {
   font-family: "Meiryo", sans-serif;
 }
 
+/* 見出しデザイン */
 h1 {
   color: #ff66cc;
   margin-top: 100px;
 }
+
+/* セクション全体 */
 #about-me {
   background-color: #fff0f9;
   border-radius: 20px;
-  padding: 20px;
-  margin: 50px auto;
+  padding: 30px;
+  margin: 60px auto;
   width: 80%;
-  font-family: "Meiryo", sans-serif;
-}
-
-#about-me h2 {
-  color: #ff66cc;
-}
-
-#about-me ul {
   text-align: left;
-  list-style-type: "🌸 ";
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-#about-me p, li {
-  color: #444;
+/* 🖼 画像スタイル（右上に配置＋丸み） */
+.about-photo {
+  float: right;
+  width: 200px;
+  height: auto;
+  margin: 0 0 16px 24px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* リストスタイル */
+#about-me ul {
+  list-style-type: "🌸 ";
+  padding-left: 20px;
   line-height: 1.8;
+}
+
+/* テキスト */
+#about-me p, #about-me li {
+  color: #333;
+  line-height: 1.8;
+}
+
+/* float解除（高さ崩れ防止） */
+#about-me::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 📱 スマホ対応：画像を上に */
+@media (max-width: 640px) {
+  .about-photo {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+    width: 70%;
+    max-width: 300px;
+  }
 }
