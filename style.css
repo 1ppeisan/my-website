@@ -8,3 +8,25 @@ h1 {
   color: #ff66cc;
   margin-top: 100px;
 }
+#about-me {
+  background-color: #fff0f9;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 50px auto;
+  width: 80%;
+  font-family: "Meiryo", sans-serif;
+}
+
+#about-me h2 {
+  color: #ff66cc;
+}
+
+#about-me ul {
+  text-align: left;
+  list-style-type: "🌸 ";
+}
+
+#about-me p, li {
+  color: #444;
+  line-height: 1.8;
+}
